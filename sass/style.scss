@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: linear-gradient(
+		30deg,
+		rgb(44, 142, 223),
+		rgb(126, 164, 245) 80%
+	);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+	background-color: white;
+	width: 450px;
+	box-shadow: 0px 0px 10px black;
+}
+
+form {
+	padding: 40px;
+	font-size: 20px;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.form-box {
+	margin-bottom: 15px;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid rgb(197, 197, 197);
+	border-radius: 5px;
+}
+
+.form-box.error input {
+	border: 1px solid rgb(0, 137, 250);
+	background-color: rgba(0, 137, 250, 0.1);
+}
+
+.error-text {
+	margin: 5px 0 0 10px;
+	font-size: 14px;
+	color: rgb(0, 137, 250);
+	visibility: hidden;
+}
+
+.form-box.error .error-text {
+	visibility: visible;
+}
+
+.control-buttons {
+	display: flex;
+	justify-content: end;
+}
+
+.clear,
+.submit,
+.close {
+	display: block;
+	background-color: rgb(0, 140, 255);
+	padding: 8px 0px;
+	width: 100px;
+	font-size: 16px;
+	color: white;
+	margin-left: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.clear:hover,
+.submit:hover,
+.close:hover {
+	background-color: rgb(0, 107, 194);
+}
+
+.pop-up {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: -350px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	border-radius: 8px;
+	width: 500px;
+	height: 150px;
+	border: 2px solid black;
+	transition: top 0.5s;
+}
+.pop-up p {
+	margin-bottom: 15px;
+	font-size: 25px;
+}
+.pop-up .close {
+	margin-left: 0;
+}
+
+.show-pop-up {
+	top: 50px;
+} /*# sourceMappingURL=style.css.map */
+
+.success {
+	position: absolute;
+	top: 2em;
+	font-size: 2.8rem;
+	background-color: rgb(17, 179, 17);
+	padding: 1em;
+	border-radius: 8px;
+	border: 1px solid black;
+}
+
+.reject {
+	position: absolute;
+	top: 2em;
+	font-size: 2.8rem;
+	background-color: rgb(209, 19, 19);
+	padding: 1em;
+	border-radius: 8px;
+	border: 1px solid black;
+}
